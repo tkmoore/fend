@@ -1,6 +1,6 @@
 /* Global Variables */
 // API key and base weather url
-const apiKey = '483a84f6bf63a7277f4224d0207f5823&units=imperial'
+const apiKey = '<api-key>&units=imperial'
 const baseURL = 'https://api.openweathermap.org/data/2.5/weather'
 const country = 'us' // country code, United States in my case
 
