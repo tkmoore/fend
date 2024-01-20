@@ -20,7 +20,7 @@ async function apiSubmit(event) {
 
         const newData = await response.json();
         console.log(newData);
-        const resultSentence = `${newData.sentence_list[0].text}\nThe text shows has an agreement of ${newData.agreement}, with a confidence level of ${newData.confidence}%. The text is ${newData.irony.toLowerCase()} and is considered ${newData.subjectivity.toLowerCase()} with a polarity score of ${newData.score_tag}.`;
+        const resultSentence = `${newData.sentence_list[0].text}\nThe text has an agreement of ${newData.agreement}, with a confidence level of ${newData.confidence}%. The text is ${newData.irony.toLowerCase()} and is considered ${newData.subjectivity.toLowerCase()} with a polarity score of ${newData.score_tag}.`;
         console.log(resultSentence);
         document.getElementById('results').innerHTML = resultSentence
 
