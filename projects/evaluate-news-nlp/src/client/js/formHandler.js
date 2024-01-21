@@ -4,6 +4,10 @@ async function apiSubmit(event) {
     event.preventDefault();
 
     let formText = document.getElementById('name').value
+    if (!Client.checkForValidText(formText)) {
+        return;
+    }
+
     const data = {
         text: `${formText}`
     };
@@ -25,6 +29,7 @@ async function apiSubmit(event) {
         document.getElementById('results').innerHTML = resultSentence
 
     } catch (error) {
+        alert("The form field cannot be left blank. Please provide an article or text snippet for evaluation")
         console.log('error', error);
     }
 }
